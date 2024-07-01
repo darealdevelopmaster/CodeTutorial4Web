@@ -44,6 +44,7 @@ body {
     height: 100vh;
     color: var(--light-color);
     overflow-x: hidden;
+    background: #222;
 }
 
 body.theme-gradient1 {
@@ -66,6 +67,21 @@ body.theme-gradient4 {
     --gradient-color2: #ffd500;
 }
 
+
+::-webkit-scrollbar {
+    background: transparent;
+    width: 8px;
+
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--second-color);
+    border-radius: 10px;
+}
 
 /* navbar */
 
@@ -111,24 +127,9 @@ header nav>ul {
     right: -50%;
     border-radius: 100%;
     transition: var(--transition-10);
-    background: var(--main-color);
-}
-
-header nav>ul.theme1 {
-    background: var(--main-color);
-}
-
-header nav > ul.theme2 {
     background: var(--second-color);
 }
 
-header nav > ul.theme3 {
-    background: var(--third-color);
-}
-
-header nav > ul.theme4 {
-    background: var(--fourth-color);
-}
 
 
 header nav>ul.slide {
