@@ -47,6 +47,10 @@ body {
     background: #222;
 }
 
+body.over-flow-hidden {
+    overflow: hidden;
+}    
+
 body.theme-gradient1 {
     --gradient-color1: #0f0;
     --gradient-color2: #ffd500;
