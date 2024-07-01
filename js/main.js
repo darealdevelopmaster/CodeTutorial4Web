@@ -6,7 +6,7 @@ $("header nav .burger").click(() => {
     $("header nav > ul").toggleClass('slide');
     $("header nav > ul > ul li ").toggleClass('show');
     $("header").toggleClass('nav-header-animation');
-
+    $("body").toggleClass('over-flow-hidden');
 });
 
 $("a[href^='#']").click((e)=>{
@@ -41,6 +41,7 @@ $("header nav ul ul li").click(() => {
     $("header nav > ul").removeClass(`theme${getRandomInt()}`);
     $("header").removeClass('nav-header-animation');
     $("header nav > ul > ul li ").removeClass('show');
+    $("body").removeClass('over-flow-hidden');
 
 });
 
