@@ -1,17 +1,10 @@
 const pageSections = document.querySelectorAll('section');
-function getRandomInt() {
-    let random = Math.floor(Math.random() * 4) +1;
-    return random;
-}
 
 
 $("header nav .burger").click(() => {
-
-    getRandomInt()
     $("header nav .burger div").toggleClass("close-animation");
     $("header nav > ul").toggleClass('slide');
     $("header nav > ul > ul li ").toggleClass('show');
-    $("header nav > ul").toggleClass(`theme${getRandomInt()}`);
     $("header").toggleClass('nav-header-animation');
 
 });
