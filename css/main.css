@@ -7,6 +7,41 @@
     box-sizing: border-box;
 }
 
+
+section {
+    position: relative;
+    overflow: hidden;
+}
+
+section * {
+    z-index: 2;
+}
+
+section::before {
+    content: '';
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    background: none;
+    border: 10px dashed var(--second-color);
+    top: 1%;
+    right: -200px;
+    animation: rotate 5s infinite;
+    border-radius: 50%;
+    z-index: 1;
+    display: none;
+}
+
+section.active::before {
+    display: inline-block;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 ::selection {
     background: rgba(3, 30, 51, .5);
 }
