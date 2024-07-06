@@ -47,10 +47,6 @@ body {
     background: #222;
 }
 
-body.over-flow-hidden {
-    overflow: hidden;
-}    
-
 body.theme-gradient1 {
     --gradient-color1: #0f0;
     --gradient-color2: #ffd500;
@@ -443,7 +439,6 @@ header nav .burger .line2.close-animation {
     align-items: center;
     overflow: hidden;
     font-size: 1.5rem;
-    transform: translate(-50%, -50%);
 
 }
 
