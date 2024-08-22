@@ -4,8 +4,9 @@ const pageSections = document.querySelectorAll('section');
 $("header nav .burger").click(() => {
     $("header nav .burger div").toggleClass("close-animation");
     $("header nav > ul").toggleClass('slide');
-    $("header nav > ul > ul li ").toggleClass('show');
+    $("header nav > ul > ul li ").addClass('show');
     $("header").toggleClass('nav-header-animation');
+
 });
 
 $("a[href^='#']").click((e)=>{
@@ -38,8 +39,6 @@ $("header nav ul ul li").click(() => {
     $("header nav .burger div").removeClass("close-animation");
     $("header nav > ul").removeClass('slide');
     $("header nav > ul").removeClass(`theme${getRandomInt()}`);
-    $("header").removeClass('nav-header-animation');
-    $("header nav > ul > ul li ").removeClass('show');
 
 });
 
