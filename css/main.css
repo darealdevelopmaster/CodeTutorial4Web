@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Over+the+Rainbow&family=Poetsen+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Slackey&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=New+Amsterdam&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -19,21 +19,24 @@ section * {
 
 section::before {
     content: '';
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     position: absolute;
     background: none;
     border: 10px dashed var(--second-color);
-    top: 1%;
-    right: -200px;
+    background: #333;
+    top: 3%;
+    right: 18%;
     animation: rotate 5s infinite;
     border-radius: 50%;
     z-index: 1;
-    display: none;
+    transition: opacity var(--transition-3);
+    opacity: 0;
+    box-sizing: auto;
 }
 
 section.active::before {
-    display: inline-block;
+    opacity: 1;
 }
 
 @keyframes rotate {
@@ -58,8 +61,12 @@ section.active::before {
     --light-color: #fff;
     --trans-white: rgba(255, 255, 255, 0.5);
     --slackey-font: 'Slackey';
+    --mali-font: 'Mali';
     --over_the_rainbow-font: 'Over the Rainbow';
     --poetsen_one-font: 'Poetsen One';
+
+
+
     --poppins-font: 'Poppins';
     --transition-10: 1s cubic-bezier(.2, .49, .32, .99);
     --transition-30: 3s cubic-bezier(.2, .49, .32, .99);
@@ -74,7 +81,7 @@ section.active::before {
 
 body {
     font-size: 18px;
-    font-family: var(--slackey-font), sans-serif;
+    font-family: var(--mali-font), sans-serif;
     position: relative;
     height: 100vh;
     color: var(--light-color);
@@ -312,7 +319,7 @@ header nav .burger .line2.close-animation {
     width: 400px;
     height: 400px;
     border-radius: 50%;
-    background: var(--second-color);
+    background: #222;
     z-index: 1;
 }
 
@@ -324,7 +331,7 @@ header nav .burger .line2.close-animation {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background: #222;
+    background: var(--second-color);
     z-index: 1;
 }
 
@@ -336,7 +343,7 @@ header nav .burger .line2.close-animation {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background: var(--second-color);
+    background: var(--dark-color);
     z-index: 1;
 }
 
@@ -354,14 +361,21 @@ header nav .burger .line2.close-animation {
     gap: 5px;
     z-index: 4;
     transition: var(--transition-10);
+    
 }
 
 .about-btn a {
     color: var(--light-color);
     text-decoration: none;
-    background: var(--second-color);
+    background: transparent;
     padding: 10px 20px;
-    border-radius: 5px;
+    border: 1px solid var(--second-color);
+    transition: var(--transition-3);
+}
+
+.about-btn a:hover {
+    background: var(--second-color);
+    box-shadow: 0 0 10px var(--second-color);
 }
 
 .big__text-container {
@@ -441,14 +455,14 @@ header nav .burger .line2.close-animation {
 }
 
 .css {
-    left: calc(50% + 24.64%);
-    top: calc(50% - 36.69%);
+    left: calc(50% - 24.64%);
+    top: calc(50% - 30.69%);
 
 }
 
 .html {
     top: calc(50% + 30.53%);
-    left: calc(50% + 36.66%);
+    left: calc(50% + 10.66%);
 
 }
 
@@ -675,6 +689,7 @@ section p {
     background: var(--second-color);
     opacity: 0.5;
     transition: var(--transition-10);
+    z-index: 2;
 }
 
 .img1:hover::after {
@@ -1044,7 +1059,11 @@ footer .social-links * {
         font-size: 2rem;
     }
     
+    section::before {
+        width: 150px;
+        height: 150px;
 
+    }
   
 }
 
@@ -1055,7 +1074,12 @@ footer .social-links * {
     }
 
     footer p {
-        font-size: 0.5rem;
+        font-size: 1rem;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 1rem;
     }
     
 
@@ -1084,6 +1108,12 @@ footer .social-links * {
     .about__section .about__text .career .item {
         height: 100px;
     } 
+
+    section::before {
+        width: 150px;
+        height: 150px;
+
+    }
 }
 
 @media screen and (max-width: 335px) {
